@@ -1,0 +1,1 @@
+# polybar-script-power-status
