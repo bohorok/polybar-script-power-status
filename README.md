@@ -1,1 +1,23 @@
-# polybar-script-power-status
+# POLYBARSCRIPTPOWERSTATUS
+configurable module in the form of a bash script displaying information about the power status for polybar.
+For use width laptops.
+
+# DEPENDENCIES
+Installed and working bar polybar
+acpi version 1.7
+The script has been tested with version 1.7, but it will probably work correctly with other versions
+
+# EXAMPLECONFIGURATIONOFTHEMODULEINTHEPOLYBARCONFIGURATIONFILE(CONFIG.INI)
+[module/power-status]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/power/power-status.sh
+interval = 10
+format = <label>
+format-background = ${colors.background-2}
+label = %output%
+label-minlen = 41
+label-maxlen = 41
+label-alignment = right
+
+# CONFIGURABLESCRIPTOUTPUT
+When you add a script to the bar, the data generated and its appearance will depend on the configuration in the script. All available configuration options are available inside the script in the section config script
